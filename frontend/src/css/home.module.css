@@ -1,0 +1,200 @@
+.page {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--color-bg);
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+    border-radius: 16px;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-surface);
+    min-height: calc(100vh - 24px);
+    box-sizing: border-box;
+}
+
+.sidebar,
+.sidebarCollapsed {
+    width: 100%;
+    flex-shrink: 0;
+    border-radius: 16px;
+    border: 1px solid var(--color-border);
+    background: linear-gradient(180deg, var(--color-primary-tint) 0%, var(--color-surface) 55%);
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    box-sizing: border-box;
+    position: relative;
+    transition: width 0.22s ease;
+}
+
+.toggleButton {
+    display: none !important;
+}
+
+.spacer {
+    display: none;
+}
+
+.content {
+    flex-grow: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.toolbar {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+}
+
+.filterButton {
+    border-radius: 24px;
+    border-color: var(--color-border-strong);
+    color: var(--color-text);
+    padding: 10px 24px;
+    white-space: nowrap;
+    align-self: flex-start;
+}
+
+.muted {
+    color: var(--color-text);
+}
+
+.storeGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.sidebarItem,
+.sidebarItemCollapsed {
+    justify-content: flex-start;
+    min-width: 0;
+    white-space: nowrap;
+    color: var(--color-heading);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-size: 14px;
+    transition: background-color 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.sidebarItemCollapsed {
+    justify-content: center;
+    padding: 10px;
+}
+
+.sidebarItem:hover,
+.sidebarItemCollapsed:hover {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: #fff;
+}
+
+@media (min-width: 768px) {
+    .page {
+        padding: 24px;
+    }
+
+    .panel {
+        flex-direction: row;
+        gap: 24px;
+        padding: 24px;
+        border-radius: 32px;
+        min-height: calc(100vh - 48px);
+        align-items: flex-start;
+    }
+
+    /* sidebar is pinned to the viewport; the page scrolls past it */
+    .sidebar,
+    .sidebarCollapsed {
+        position: fixed;
+        top: 48px;
+        left: 48px;
+        height: calc(100vh - 96px);
+        border-radius: 24px;
+        padding: 16px 12px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 10px;
+        box-shadow: 0 6px 20px rgba(13, 90, 167, 0.1);
+        overflow: visible;
+        z-index: 20;
+    }
+
+    .sidebar {
+        width: 210px;
+    }
+
+    .sidebarCollapsed {
+        width: 72px;
+    }
+
+    /* reserve the space the fixed sidebar occupies */
+    .content {
+        gap: 24px;
+        flex: 1;
+        min-width: 0;
+        margin-left: 234px;
+    }
+
+    .panel:has(.sidebarCollapsed) .content {
+        margin-left: 96px;
+    }
+
+    .toggleButton {
+        display: flex !important;
+        position: absolute;
+        top: 14px;
+        right: -14px;
+        z-index: 5;
+        width: 28px;
+        height: 28px;
+        background-color: var(--color-surface) !important;
+        border: 1px solid var(--color-border) !important;
+        color: var(--color-primary-dark) !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    }
+
+    .toggleButton:hover {
+        background-color: var(--color-primary) !important;
+        color: #fff !important;
+        border-color: var(--color-primary) !important;
+    }
+
+    .sidebar .sidebarItem:first-of-type,
+    .sidebarCollapsed .sidebarItemCollapsed:first-of-type {
+        margin-top: 24px;
+    }
+
+    .spacer {
+        display: block;
+        flex-grow: 1;
+    }
+
+    .toolbar {
+        flex-direction: row;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .filterButton {
+        align-self: auto;
+    }
+
+    .storeGrid {
+        grid-template-columns: 1fr;
+    }
+}

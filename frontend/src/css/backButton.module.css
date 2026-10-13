@@ -1,0 +1,21 @@
+.back {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--color-text);
+    background: none;
+    border: none;
+    padding: 0;
+    margin-bottom: 16px;
+    font: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.back:hover {
+    color: var(--color-primary-dark);
+}
+
+.label {
+    font-size: 14px;
+}

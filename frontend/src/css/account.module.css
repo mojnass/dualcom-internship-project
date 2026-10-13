@@ -1,0 +1,103 @@
+.page {
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.topBar {
+    border-bottom: 1px solid var(--color-border);
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.topBarRow {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 8px;
+}
+
+.backButtonSlot {
+    display: flex;
+}
+
+.backButtonSlot :global(.MuiButton-root) {
+    margin-bottom: 0;
+}
+
+.topBarSpacer {
+    width: 1px;
+}
+
+.pageTitle {
+    color: var(--color-primary);
+    text-align: center;
+    overflow-wrap: break-word;
+    justify-self: center;
+}
+
+.content {
+    width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content > * {
+    width: 100%;
+    max-width: 640px;
+}
+
+.readOnlyField {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.readOnlyLabel {
+    color: var(--color-text);
+    font-size: 13px;
+}
+
+.readOnlyValue {
+    color: var(--color-heading);
+    font-weight: 600;
+}
+
+.sectionTitle {
+    margin-bottom: 16px;
+    margin-top: 32px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.success {
+    color: var(--color-success);
+}
+
+.error {
+    color: var(--color-error);
+}
+
+.logoutSection {
+    margin-top: 64px;
+    padding-top: 32px;
+    border-top: 1px solid var(--color-border);
+}
+
+@media (min-width: 768px) {
+    .topBar {
+        padding: 24px;
+    }
+
+    .content {
+        padding: 24px;
+    }
+}

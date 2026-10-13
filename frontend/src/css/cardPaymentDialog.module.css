@@ -1,0 +1,28 @@
+.title {
+    color: var(--color-heading);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.row {
+    display: flex;
+    gap: 12px;
+}
+
+.row > * {
+    flex: 1;
+    min-width: 0;
+}
+
+.testNote {
+    color: var(--color-text);
+    font-size: 12px;
+}
+
+.actions {
+    padding: 16px 24px;
+}

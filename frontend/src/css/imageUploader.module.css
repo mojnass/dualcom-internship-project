@@ -1,0 +1,23 @@
+.uploader {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.button {
+    align-self: flex-start;
+}
+
+.preview {
+    width: 100%;
+    max-width: 200px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid var(--color-border);
+}
+
+.error {
+    color: var(--color-error);
+    margin: 0;
+}

@@ -1,0 +1,313 @@
+.page {
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.topBar {
+    border-bottom: 1px solid var(--color-border);
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.topBarRow {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 8px;
+}
+
+.backButtonSlot {
+    display: flex;
+}
+
+.backButtonSlot :global(.MuiButton-root) {
+    margin-bottom: 0;
+}
+
+.topBarSpacer {
+    width: 1px;
+}
+
+.pageTitle {
+    color: var(--color-primary);
+    text-align: center;
+    overflow-wrap: break-word;
+    justify-self: center;
+}
+
+.content {
+    width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.layout {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mainColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-width: 0;
+}
+
+.section {
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.sectionTitle {
+    color: var(--color-heading);
+}
+
+.addressList,
+.paymentList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.addressCard,
+.addressCardActive,
+.paymentCard,
+.paymentCardActive {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid var(--color-border);
+    background: none;
+    cursor: pointer;
+    text-align: left;
+    font: inherit;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.addressCardActive,
+.paymentCardActive {
+    border-color: var(--color-primary);
+    background-color: var(--color-primary-tint);
+}
+
+.addressCard:hover,
+.paymentCard:hover {
+    border-color: var(--color-border-strong);
+}
+
+.addressIcon,
+.paymentIcon {
+    color: var(--color-primary-dark);
+    flex-shrink: 0;
+}
+
+.addressText,
+.paymentText {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.addressLabel,
+.paymentLabel {
+    font-weight: 600;
+    color: var(--color-heading);
+}
+
+.addressDetail,
+.paymentDetail {
+    color: var(--color-text);
+    font-size: 13px;
+    overflow-wrap: break-word;
+}
+
+.noAddress {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.storeGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: 12px;
+}
+
+.storeGroup:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.storeName {
+    font-weight: 600;
+    color: var(--color-heading);
+    font-size: 14px;
+}
+
+.orderRow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.thumb,
+.thumbPlaceholder {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    flex-shrink: 0;
+}
+
+.thumbPlaceholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-bg);
+    color: var(--color-border);
+}
+
+.orderInfo {
+    flex: 1;
+    min-width: 0;
+}
+
+.orderName {
+    color: var(--color-heading);
+    overflow-wrap: break-word;
+    font-size: 14px;
+}
+
+.orderDetail {
+    color: var(--color-text);
+    font-size: 13px;
+}
+
+.orderPrice {
+    font-weight: 600;
+    color: var(--color-heading);
+    flex-shrink: 0;
+}
+
+.summaryColumn {
+    min-width: 0;
+}
+
+.summary {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+}
+
+.summaryRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+}
+
+.divider {
+    height: 1px;
+    background-color: var(--color-border);
+    margin: 4px 0;
+}
+
+.totalRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.totalLabel {
+    font-weight: 700;
+    color: var(--color-heading);
+    font-size: 18px;
+}
+
+.totalValue {
+    font-weight: 700;
+    color: var(--color-primary-dark);
+    font-size: 22px;
+}
+
+.note {
+    color: var(--color-text);
+    font-size: 13px;
+    background-color: var(--color-bg);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.placeButton {
+    margin-top: 4px !important;
+    padding: 12px !important;
+}
+
+.hint {
+    color: var(--color-text);
+    font-size: 13px;
+    text-align: center;
+}
+
+.emptyState {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 64px 16px;
+    text-align: center;
+}
+
+.muted {
+    color: var(--color-text);
+}
+
+.error {
+    color: var(--color-error);
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    .topBar {
+        padding: 24px;
+    }
+
+    .content {
+        padding: 24px;
+    }
+
+    .layout {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    .mainColumn {
+        flex: 1;
+    }
+
+    .summaryColumn {
+        flex: 0 0 340px;
+        position: sticky;
+        top: 24px;
+    }
+}

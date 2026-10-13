@@ -1,0 +1,23 @@
+.page {
+    padding: 16px;
+}
+
+.title {
+    margin-bottom: 16px;
+    color: var(--color-primary);
+    overflow-wrap: break-word;
+}
+
+.body {
+    color: var(--color-text);
+}
+
+.logoutButton {
+    margin-top: 24px;
+}
+
+@media (min-width: 768px) {
+    .page {
+        padding: 32px;
+    }
+}
